@@ -1,0 +1,32 @@
+.section__button {
+    background-color: white;
+    border: none;
+    color: teal;
+    padding: 20px 15px;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.section__button:hover {
+    color: hsl(180, 96%, 35%);
+}
+
+.section__button:active {
+    color: hsl(180, 96%, 40%);
+}
+
+@media (max-width: 768px) {
+    .section__button {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        border: none;
+        padding: 10px;
+        margin: 0 auto;
+    }
+}
+
+.section__button:disabled {
+    color: gray;
+    cursor: not-allowed;
+}

@@ -1,0 +1,44 @@
+.form {
+    padding: 15px;
+    display: grid;
+    grid-template-columns:  1fr auto;
+    grid-column-gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__newTask {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form__button {
+    background-color: hsl(180, 100%, 25%);
+    color: #fefefe;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .form__button {
+        display: flex;
+        flex-grow: 1;
+        margin: 10px 0;
+        justify-content: center;
+    }
+}
+
+.form__button:hover {
+    background-color: hsl(180, 96%, 35%);
+    transform: scale(1.1);
+}
+
+.form__button:active {
+    background-color: hsl(180, 96%, 40%);
+}
