@@ -8,6 +8,9 @@ This project was bootstrapped with [Create React App](https://kingagrelewicz.git
 
 ![To do list gif](public/toDoList.gif)
 
+## Technologies
+During creating the website I was using Visual Studio Code and I used, ES6+ Features. The website is built using HTML, CSS, and JavaScript. The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid und immutability conventions.
+
 ## Available Scripts
 
 In the project directory, you can run:
