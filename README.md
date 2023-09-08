@@ -4,7 +4,9 @@
 This is the app that helps you collect all your tasks in one place. Use the form window and the button to add a new task. You can mark your task as done or delete it if you don't need it anymore.
 You can mark all tasks as done and hide them if you don't need them.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://kingagrelewicz.github.io/todos-list-react/).
+
+![To do list gif](public/toDoList.gif)
 
 ## Available Scripts
 
