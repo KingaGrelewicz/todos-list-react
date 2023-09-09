@@ -1,19 +1,29 @@
 .form {
     padding: 15px;
     display: grid;
-    grid-template-columns:  1fr auto;
+    grid-template-columns: 1fr auto;
     grid-column-gap: 12px;
 }
 
 @media (max-width: 768px) {
     .form {
-        grid-template-columns: 1fr;
+        margin: 0 0 1px;
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
     }
 }
 
 .form__newTask {
     padding: 10px;
     border: 1px solid #ddd;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 100%;
+    align-self: center;
 }
 
 .form__button {
@@ -29,6 +39,7 @@
     .form__button {
         display: flex;
         flex-grow: 1;
+        flex-basis: 100%;
         margin: 10px 0;
         justify-content: center;
     }
