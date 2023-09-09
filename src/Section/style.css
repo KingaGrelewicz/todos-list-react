@@ -5,14 +5,6 @@
     box-shadow: 0 0 5px #ddd;
 }
 
-
-@media (max-width: 768px) {
-    .section {
-        display: flex;
-        flex-basis: 100%;
-        flex-wrap: wrap;
-    }
-}
 .section__header {
     border-bottom: 2px solid #eee;
     font-size: 20px;
