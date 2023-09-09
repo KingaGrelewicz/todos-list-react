@@ -9,8 +9,9 @@ const Tasks = (props) => (
                 <button className="list__button list__button--toggleDone">
                     {task.done ? "✔" : ""}
                 </button>
-                <span className={`"list__content${task.done ? " list__content--done" : ""}"`} />
+                <span className={`"list__content${task.done ? " list__content--done" : ""}"`}>
                 {task.content}
+                </span>
                 <button className="list__button list__button--remove">
                     🗑
                 </button>
