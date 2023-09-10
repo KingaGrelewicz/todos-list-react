@@ -1,4 +1,4 @@
-.section__button {
+.buttons__button {
     background-color: white;
     border: none;
     color: teal;
@@ -7,16 +7,16 @@
     transition: 2s;
 }
 
-.section__button:hover {
+.buttons__button:hover {
     color: hsl(180, 96%, 35%);
 }
 
-.section__button:active {
+.buttons__button:active {
     color: hsl(180, 96%, 40%);
 }
 
 @media (max-width: 768px) {
-    .section__button {
+    .buttons__button {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
@@ -26,7 +26,7 @@
     }
 }
 
-.section__button:disabled {
+.buttons__button:disabled {
     color: gray;
     cursor: not-allowed;
 }
