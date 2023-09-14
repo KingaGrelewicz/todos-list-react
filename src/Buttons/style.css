@@ -4,7 +4,7 @@
     color: teal;
     padding: 20px 15px;
     cursor: pointer;
-    transition: 2s;
+    transition: 0.5s;
 }
 
 .buttons__button:hover {
