@@ -11,7 +11,7 @@ Demo [link](https://kingagrelewicz.github.io/todos-list-react/)
 ![To do list gif](public/toDoList.gif)
 
 ## Technologies
-During creating the website I was using Visual Studio Code and I used, ES6+ Features. The website is built using HTML, CSS, Babel, Webpack, Create React App and JavaScript. The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid und immutability conventions.
+During creating the website I was using Visual Studio Code and I used, ES6+ Features. The website is built using HTML, CSS, Babel, Webpack, Create React App and JavaScript. The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid and immutability and BEM conventions.
 
 ## Available Scripts
 
