@@ -1,50 +1,50 @@
-.form {
+import styled from "styled-components"
+
+export const StyledForm = styled.form`
     padding: 15px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-column-gap: 12px;
-}
 
-@media (max-width: 768px) {
-    .form {
+    @media (max-width: 768px) {
         margin: 0 0 1px;
         display: flex;
         flex-basis: 100%;
         flex-wrap: wrap;
     }
-}
+`;
 
-.form__newTask {
+export const NewTask = styled.input`
     padding: 10px;
     border: 1px solid #ddd;
     width: 100%;
     align-self: center;
-}
+`;
 
-.form__button {
+export const Button = styled.button`
     background-color: hsl(180, 100%, 25%);
     color: #fefefe;
     border: none;
     padding: 10px;
     cursor: pointer;
     transition: 0.5s;
-}
 
-@media (max-width: 768px) {
-    .form__button {
+    &:hover{
+        background-color: hsl(180, 96%, 35%);
+        transform: scale(1.1);
+    }
+
+    &:active {
+        background-color: hsl(180, 96%, 40%);
+    }
+
+    @media (max-width: 768px) {
         display: flex;
         flex-grow: 1;
         flex-basis: 100%;
         margin: 10px 0;
         justify-content: center;
-    }
 }
+`;
+    
 
-.form__button:hover {
-    background-color: hsl(180, 96%, 35%);
-    transform: scale(1.1);
-}
-
-.form__button:active {
-    background-color: hsl(180, 96%, 40%);
-}
