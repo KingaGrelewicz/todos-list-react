@@ -1,42 +1,37 @@
-.section {
+import styled from "styled-components"
+
+export const Part = styled.section`
     background-color: white;
     margin: 10px 0;
     word-break: break-word;
     box-shadow: 0 0 5px #ddd;
-}
+`;
 
-.section__header {
-    border-bottom: 2px solid #eee;
+export const Title = styled.h2`
     font-size: 20px;
     padding: 20px 15px;
     margin: 0;
-}
 
-@media (max-width: 768px) {
-    .section__header {
+    @media (max-width: 768px) {
         display: flex;
         flex-basis: 100%;
         flex-wrap: wrap;
         margin: 0;
     }
-}
+`;
 
-
-.section__list {
+export const SectionList = styled.header`
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #ddd;
     background-color: white;
-}
 
-@media (max-width: 768px) {
-    .section__list {
+    @media (max-width: 768px) {
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
+
     }
-}
-
-
+`;  
