@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.942681c0.css","mappings":"AAAA,KACE,qBACF,CAEA,iBACE,kBACF,CAEA,KACE,qBAAsB,CACtB,gCACF","sources":["style.css"],"sourcesContent":["html {\n  box-sizing: border-box;\n}\n\n*, ::after, ::before {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: #eee;\n  font-family: 'Open Sans', sans-serif;\n}"],"names":[],"sourceRoot":""}
