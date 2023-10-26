@@ -6,12 +6,24 @@ You can mark all tasks as done and hide them if you don't need them.
 
 This project was bootstrapped with Create React App.
 
-Demo [link](https://kingagrelewicz.github.io/todos-list-react/)
+Demo [Link]
+(https://kingagrelewicz.github.io/todos-list-react/)
 
 ![To do list gif](public/toDoList.gif)
 
 ## Technologies
-During creating the website I was using Visual Studio Code and I used, ES6+ Features. The website is built using HTML, CSS, Babel, Webpack, Create React App and JavaScript. The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid and immutability and BEM conventions.
+During creating the website I was using Visual Studio Code and I used, ES6+ Features. 
+The website is built using: 
+- HTML, 
+- CSS, 
+- Babel, 
+- Webpack, 
+- Create React App, 
+- JavaScript,
+- Styled Components,
+- Hooks.
+
+The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid and immutability.
 
 ## Available Scripts
 
