@@ -6,6 +6,7 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 import { useTask } from "./useTask";
+import { GlobalStyled } from './styled';
 
 function App() {
     const [hideDone, setHideDone] = useState(false);
@@ -24,6 +25,7 @@ function App() {
 
     return (
       <Container>
+        <GlobalStyled />
         <Header title="Lista zadań" />
         <Section
           title="Dodaj nowe zadanie"
