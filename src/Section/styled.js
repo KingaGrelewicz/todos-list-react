@@ -12,7 +12,7 @@ export const Title = styled.h2`
     padding: 20px 15px;
     margin: 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         display: flex;
         flex-basis: 100%;
         flex-wrap: wrap;
@@ -28,7 +28,7 @@ export const SectionList = styled.header`
     border-bottom: 2px solid #ddd;
     background-color: white;
 
-    @media (max-width: 768px) {
+    @media (max-width:  ${({ theme }) => theme.breakpoints.mobile}px) {
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;

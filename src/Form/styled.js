@@ -6,7 +6,7 @@ export const StyledForm = styled.form`
     grid-template-columns: 1fr auto;
     grid-column-gap: 12px;
 
-    @media (max-width: 768px) {
+    @media (max-width:  ${({ theme }) => theme.breakpoints.mobile}px) {
         margin: 0 0 1px;
         display: flex;
         flex-basis: 100%;
@@ -38,7 +38,7 @@ export const Button = styled.button`
         background-color: hsl(180, 96%, 40%);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width:  ${({ theme }) => theme.breakpoints.mobile}px) {
         display: flex;
         flex-grow: 1;
         flex-basis: 100%;
@@ -46,5 +46,3 @@ export const Button = styled.button`
         justify-content: center;
 }
 `;
-    
-

@@ -25,7 +25,7 @@ export const SectionButtons = styled.div`
             }
         `}
     
-        @media (max-width: 768px) {
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
             display: grid;
             grid-template-columns: 1fr;
             justify-content: center;
