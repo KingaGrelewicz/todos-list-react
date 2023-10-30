@@ -12,16 +12,14 @@ Demo [Link]
 ![To do list gif](public/toDoList.gif)
 
 ## Technologies
-During creating the website I was using Visual Studio Code and I used, ES6+ Features. 
-The website is built using: 
-- HTML, 
-- CSS, 
-- Babel, 
-- Webpack, 
-- Create React App, 
-- JavaScript,
-- Styled Components,
-- Hooks.
+During creating the website I was using Visual Studio Code,
+- HTML
+- CSS
+- JavaScript
+- Create React App
+- Styled Components
+- Hooks 
+- ES6+ Features 
 
 The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid and immutability.
 
