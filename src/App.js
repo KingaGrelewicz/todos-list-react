@@ -7,13 +7,6 @@ import Header from "./Header";
 import Container from "./Container";
 import { useTask } from "./useTask";
 import { GlobalStyled } from './styled';
-import { ThemeProvider } from 'styled-components';
-
-const theme = {
-  breakpoints: {
-    mobile: 768,
-  },
-};
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -31,7 +24,6 @@ function App() {
   } = useTask();
 
   return (
-    <ThemeProvider theme={theme}>
       <Container>
         <GlobalStyled />
         <Header title="Lista zadań" />
@@ -57,7 +49,6 @@ function App() {
             />}
         />
       </Container>
-    </ThemeProvider>
   );
 }
 
