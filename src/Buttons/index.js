@@ -1,21 +1,21 @@
-import { SectionButtons } from "./styled"
+import { Container, Button } from "./styled"
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
-  <SectionButtons>
+  <Container>
     {tasks.length > 0 && (
       <>
-        <SectionButtons onClick={toggleHideDone}>
+        <Button onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
-        </SectionButtons>
-        <SectionButtons
+        </Button>
+        <Button
           onClick={setAllDone}
           disabled={tasks.every(({ done }) => done)}
         >
           Ukończ wszystkie
-        </SectionButtons>
+        </Button>
       </>
     )}
-  </SectionButtons>
+  </Container>
 );
 
 export default Buttons;

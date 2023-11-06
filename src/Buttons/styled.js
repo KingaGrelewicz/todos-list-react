@@ -1,27 +1,33 @@
 import styled, { css } from "styled-components"
 
-export const SectionButtons = styled.div`
-    background-color: white;
+export const Container = styled.div`
+    background: ${({ theme }) => theme.colors.white};
     display: flex;
     border: none;
-    color: teal;
+    padding: 20px 15px;
+`;
+
+export const Button = styled.div`
+    background: ${({ theme }) => theme.colors.white};
+    border: none;
+    color: ${({ theme }) => theme.colors.teal};
     padding: 20px 15px;
     cursor: pointer;
     transition: 0.5s;
 
         &:hover {
-            color: hsl(180, 96%, 35%);
+            filter: brightness(120%);
         }
 
         &:active{
-            color: hsl(180, 96%, 40%);
+            filter: brightness(140%);
         }
 
         ${({ disabled }) => disabled && css`
-            color: gray;
+            color: ${({ theme }) => theme.colors.aluminium};
             cursor: not-allowed;
             &:hover {
-                color: gray
+                color: ${({ theme }) => theme.colors.aluminium};
             }
         `}
     

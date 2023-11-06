@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-export const Part = styled.section`
-    background-color: white;
+export const Wrapper = styled.section`
+    background: ${({ theme }) => theme.colors.white};
     margin: 10px 0;
     word-break: break-word;
     box-shadow: 0 0 5px #ddd;
@@ -25,7 +25,7 @@ export const SectionList = styled.header`
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.westar};
     background-color: white;
 
     @media (max-width:  ${({ theme }) => theme.breakpoints.mobile}px) {
