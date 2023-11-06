@@ -8,7 +8,7 @@ export const List = styled.ul`
 
 export const Item = styled.li`
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.westar};
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px; 
@@ -27,7 +27,7 @@ export const Content = styled.span`
 
 export const Button = styled.button`
     border: none;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     width: 30px;
     height: 30px;
     padding: 0px;
@@ -35,27 +35,27 @@ export const Button = styled.button`
     transition: 1s;
 
     ${({ $toggleDone }) => $toggleDone && css`
-    background: hsl(111, 94%, 21%);
+    background: ${({ theme }) => theme.colors.funGreen};
     
         &:hover {
-            background: hsl(111, 94%, 27%);
+            filter: brightness(120%);
         }
 
         &:active {
-            background: hsl(111, 94%, 35%);
+            filter: brightness(140%);
         }
     `}
 
     ${({ $remove }) => $remove && css`
-        background: hsl(0, 71%, 53%);
+        background: ${({ theme }) => theme.colors.torchRed};
     
     
         &:hover {
-            background: hsl(0, 71%, 60%);
+            filter: brightness(110%);
         }
 
         &:active {
-            background: hsl(0, 71%, 67%);
+            filter: brightness(120%);
         }
     `}
 `;

@@ -16,26 +16,26 @@ export const StyledForm = styled.form`
 
 export const NewTask = styled.input`
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }) => theme.colors.westar};
     width: 100%;
     align-self: center;
 `;
 
 export const Button = styled.button`
-    background-color: hsl(180, 100%, 25%);
-    color: #fefefe;
+    background: ${({ theme }) => theme.colors.teal};
+    color: ${({ theme }) => theme.colors.white};
     border: none;
     padding: 10px;
     cursor: pointer;
     transition: 0.5s;
 
     &:hover{
-        background-color: hsl(180, 96%, 35%);
+        filter: brightness(120%);
         transform: scale(1.1);
     }
 
     &:active {
-        background-color: hsl(180, 96%, 40%);
+        filter: brightness(140%);
     }
 
     @media (max-width:  ${({ theme }) => theme.breakpoints.mobile}px) {
