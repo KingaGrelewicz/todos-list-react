@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 export const Container = styled.div`
     background: ${({ theme }) => theme.colors.white};
@@ -19,17 +19,14 @@ export const Button = styled.div`
             filter: brightness(120%);
         }
 
-        &:active{
+        &:active {
             filter: brightness(140%);
         }
 
-        ${({ disabled }) => disabled && css`
+        &:disabled {
             color: ${({ theme }) => theme.colors.aluminium};
             cursor: not-allowed;
-            &:hover {
-                color: ${({ theme }) => theme.colors.aluminium};
-            }
-        `}
+        }
     
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
             display: grid;
