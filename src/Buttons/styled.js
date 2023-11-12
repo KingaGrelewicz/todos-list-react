@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding: 20px 15px;
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
     background: ${({ theme }) => theme.colors.white};
     border: none;
     color: ${({ theme }) => theme.colors.teal};
@@ -26,6 +26,7 @@ export const Button = styled.div`
         &:disabled {
             color: ${({ theme }) => theme.colors.aluminium};
             cursor: not-allowed;
+            filter: none;
         }
     
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
