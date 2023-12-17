@@ -22,7 +22,7 @@ During creating the website I was using Visual Studio Code,
 - ES6+ Features 
 - Redux
 
-The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid and immutability.
+The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox and grid.
 
 ## Available Scripts
 
