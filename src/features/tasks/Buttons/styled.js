@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     background: ${({ theme }) => theme.colors.white};
-    display: flex;
     border: none;
     padding: 20px 15px;
 `;
