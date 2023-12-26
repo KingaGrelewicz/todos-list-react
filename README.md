@@ -9,7 +9,7 @@ This project was bootstrapped with Create React App.
 Demo [Link]
 (https://kingagrelewicz.github.io/todos-list-react/)
 
-![To do list gif](../toDoList.gif)
+![To do list gif](/src/toDoList.gif)
 
 ## Technologies
 During creating the website I was using Visual Studio Code,
