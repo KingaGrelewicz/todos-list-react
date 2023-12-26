@@ -23,7 +23,7 @@ const tasksSlice = createSlice({
         },
         setAllDone: ({ tasks }) => {
             for (const task of tasks) {
-                task.done = !task.done;
+                task.done = true;
             }
         },
     },
