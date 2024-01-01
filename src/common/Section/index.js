@@ -2,7 +2,7 @@ import { Wrapper, Title, SectionList } from "./styled"
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <Wrapper>
-    <SectionList className="section__list">
+    <SectionList>
       <Title>{title}</Title>
       {extraHeaderContent}
     </SectionList>
