@@ -14,13 +14,6 @@ export const StyledForm = styled.form`
     }
 `;
 
-export const NewTask = styled.input`
-    padding: 10px;
-    border: 1px solid ${({ theme }) => theme.colors.westar};
-    width: 100%;
-    align-self: center;
-`;
-
 export const Button = styled.button`
     background: ${({ theme }) => theme.colors.teal};
     color: ${({ theme }) => theme.colors.white};
