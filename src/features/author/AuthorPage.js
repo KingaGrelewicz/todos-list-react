@@ -10,7 +10,7 @@ const AuthorPage = () => (
             body={
                 <>
                     <p>
-                        W czasie wolnym lubię zatrzymać się na chwilę przy kawie oraz lub szydełkując nowe projekty.
+                        W czasie wolnym lubię zatrzymać się na chwilę przy kawie oraz serialu lub szydełkując nowe projekty.
                         Bardzo lubię podróżować oraz poznawać inne kultury, spacerować pośród nowych nieznanych mi jeszcze miejsc.
                     </p>
                 </>
