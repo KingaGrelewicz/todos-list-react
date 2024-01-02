@@ -1,16 +1,17 @@
-import { createGlobalStyle } from 'styled-components'
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
-export const GlobalStyled = createGlobalStyle`
-    html {
-        box-sizing: border-box;
-    }
+export const StyledNavLink = styled(NavLink)`
+    display: grid;
+    grid-template-columns: auto auto;
+    text-decoration: none;
+    justify-content: center;
 
-    *, ::after, ::before {
-        box-sizing: inherit;
+    &.active {
+        color: ${({ theme }) => theme.colors.torchRed};
     }
+`;
 
-    body {
-        background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
-    }
+export const StyledList = styled.li`
+    list-style: none;
 `;

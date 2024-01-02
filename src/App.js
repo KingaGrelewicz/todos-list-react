@@ -1,18 +1,20 @@
-import { NavLink, Switch, Route, HashRouter, Redirect } from "react-router-dom";
+import { Switch, Route, HashRouter, Redirect } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage";
 import { TaskPage } from "./features/tasks/TaskPage";
 import AuthorPage from "./features/author/AuthorPage";
+import { StyledNavLink, StyledList } from "./styled";
+
 
 export const App = () => (
   <HashRouter>
     <nav>
       <ul>
-        <li>
-          <NavLink exact to="/zadania">Zadania</NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/autor">O autorze</NavLink>
-        </li>
+        <StyledList>
+          <StyledNavLink exact to="/zadania">Zadania</StyledNavLink>
+        </StyledList>
+        <StyledList>
+          <StyledNavLink exact to="/autor">O autorze</StyledNavLink>
+        </StyledList>
       </ul>
       <Switch>
         <Route path="/zadania/:id">
