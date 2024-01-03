@@ -4,7 +4,7 @@ import { getTaskFormLocalStorage } from "./taskLocalStorage";
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: getTaskFormLocalStorage(),
+        tasks: Array.isArray(getTaskFormLocalStorage()) ? getTaskFormLocalStorage() : [],
         hideDone: false,
     },
     reducers: {
@@ -53,5 +53,16 @@ export const selectIsEveryTaskDone = state => selectTasks(state).every(({done}) 
 
 export const getTaskById = (state, taskId) => 
 selectTasks(state).find(({ id }) => id === taskId);
+
+export const selectTasksByQuery = (state, query) => {
+    const tasks = selectTasks(state);
+
+    if (!query || query.trim() === "") {
+        return tasks;
+    }
+    
+    return tasks.filter(({content}) => content.toUpperCase().includes(query.trim().toUpperCase()));
+}
+    
 
 export default tasksSlice.reducer;
