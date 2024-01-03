@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledForm = styled.form`
-    padding: 15px;
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-column-gap: 12px;
@@ -14,7 +14,7 @@ export const StyledForm = styled.form`
     }
 `;
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
     background: ${({ theme }) => theme.colors.teal};
     color: ${({ theme }) => theme.colors.white};
     border: none;
