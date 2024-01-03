@@ -1,17 +1,24 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledNav = styled.ul`
     display: grid;
     grid-template-columns: auto auto;
-    text-decoration: none;
     justify-content: center;
+    background-color: ${({ theme }) => theme.colors.teal};
+    margin: 0;
+`;
+
+export const StyledNavLink = styled(NavLink)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.white};
 
     &.active {
-        color: ${({ theme }) => theme.colors.torchRed};
+        font-weight: bold;
     }
 `;
 
 export const StyledList = styled.li`
     list-style: none;
+    padding: 20px;
 `;
