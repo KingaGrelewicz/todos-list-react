@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from "@reduxjs/toolkit";
-import { StyledForm, Button } from "./styled"
+import { StyledForm, StyledButton } from "./styled"
 import { addTask } from "../../taskSlice";
 import Input from '../../Input';
 
@@ -43,7 +43,7 @@ const Form = () => {
                 name="newTask"
                 placeholder="Co jest do zrobienia?"
             />
-            <Button onClick={focusInput} className="form__button">Dodaj zadanie</Button>
+            <StyledButton onClick={focusInput} className="form__button">Dodaj zadanie</StyledButton>
         </StyledForm>
     )
 };
