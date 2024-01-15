@@ -4,8 +4,10 @@ import { getTaskFormLocalStorage } from "./taskLocalStorage";
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: Array.isArray(getTaskFormLocalStorage()) ? getTaskFormLocalStorage() : [],
+        tasks: getTaskFormLocalStorage(),
         hideDone: false,
+        loading: false,
+        error: null,
     },
     reducers: {
         addTask: ({ tasks }, { payload: task }) => {
@@ -27,10 +29,24 @@ const tasksSlice = createSlice({
                 task.done = true;
             }
         },
-        fetchExampleTasks: () => { },
+        fetchExampleTasks: () => {},
         setTasks: (state, { payload: tasks }) => {
             state.tasks = tasks;
-        }
+        },
+        fetchExampleTasksStart: (state) => {
+            state.loading = true;
+            state.error = null; 
+        },
+
+        fetchExampleTasksSuccess: (state, action) => {
+            state.loading = false;
+            state.tasks = action.payload;
+        },
+
+        fetchExampleTasksFailure: (state, action) => {
+            state.loading = false;
+            state.error = action.payload; 
+        },
     },
 });
 
@@ -41,7 +57,9 @@ export const {
     removeTask,
     setAllDone,
     fetchExampleTasks,
-    setTasks,
+    fetchExampleTasksStart,
+    fetchExampleTasksSuccess,
+    fetchExampleTasksFailure,
 } = tasksSlice.actions;
 
 const selectTaskState = state => state.tasks;
@@ -49,10 +67,10 @@ const selectTaskState = state => state.tasks;
 export const selectTasks = state => selectTaskState(state).tasks;
 export const selectHideDone = state => selectTaskState(state).hideDone
 export const selectAreTasksEmpty = state => selectTasks(state).length === 0;
-export const selectIsEveryTaskDone = state => selectTasks(state).every(({done}) => done);
+export const selectIsEveryTaskDone = state => selectTasks(state).every(({ done }) => done);
 
-export const getTaskById = (state, taskId) => 
-selectTasks(state).find(({ id }) => id === taskId);
+export const getTaskById = (state, taskId) =>
+    selectTasks(state).find(({ id }) => id === taskId);
 
 export const selectTasksByQuery = (state, query) => {
     const tasks = selectTasks(state);
@@ -60,9 +78,9 @@ export const selectTasksByQuery = (state, query) => {
     if (!query || query.trim() === "") {
         return tasks;
     }
-    
-    return tasks.filter(({content}) => content.toUpperCase().includes(query.trim().toUpperCase()));
+
+    return tasks.filter(({ content }) => content.toUpperCase().includes(query.trim().toUpperCase()));
 }
-    
+
 
 export default tasksSlice.reducer;
