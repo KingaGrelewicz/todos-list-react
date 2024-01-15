@@ -4,6 +4,7 @@ import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import { getTaskById } from "../taskSlice";
+import { Wrapper } from "./styled";
 
 
 export const TaskPage = () => {
@@ -16,7 +17,9 @@ export const TaskPage = () => {
             <Section
                 title={task ? task.content : "Nie znalezniono zadania 😢"}
                 body={
-                    <><strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}</>
+                    <Wrapper>
+                        <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
+                    </Wrapper>
                 }
             />
         </Container>
