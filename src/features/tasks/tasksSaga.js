@@ -10,7 +10,7 @@ function* fetchExampleTaskHandler() {
         const exampleTasks = yield call(getExampleTasks);
         yield put(fetchExampleTasksSuccess(exampleTasks));
     } catch (error) {
-        yield put(fetchExampleTasksFailure("Ups, coś poszlo nie tak😢"));
+        yield put(fetchExampleTasksFailure("Ups, coś poszlo nie tak😢 Odśwież stronę i spróbuj jeszcze raz"));
     }
 }
 
