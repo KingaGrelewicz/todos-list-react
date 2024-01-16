@@ -18,7 +18,7 @@ export const TaskPage = () => {
                 title={task ? task.content : "Nie znalezniono zadania 😢"}
                 body={
                     <Wrapper>
-                        <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
+                        <strong>Ukończono:</strong> {task ? (task.done ? "Tak" : "Nie") : "Brak zadania"}
                     </Wrapper>
                 }
             />

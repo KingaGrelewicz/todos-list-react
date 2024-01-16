@@ -65,6 +65,7 @@ export const StyledButton = styled.button`
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
+    color: ${({ theme }) => theme.colors.teal};
 
     &:hover {
             filter: brightness(110%);
@@ -72,9 +73,5 @@ export const StyledLink = styled(Link)`
 
     &:active {
         filter: brightness(120%);
-    }
-
-    &:visited {
-        color: ${({ theme }) => theme.colors.teal};
     }
 `;
