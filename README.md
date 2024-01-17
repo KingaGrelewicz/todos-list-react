@@ -21,6 +21,7 @@ During creating the website I was using Visual Studio Code,
 - Hooks 
 - ES6+ Features 
 - Redux
+- Router
 
 The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox and grid.
 
