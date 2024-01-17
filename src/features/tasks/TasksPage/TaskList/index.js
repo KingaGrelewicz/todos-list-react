@@ -27,7 +27,7 @@ const TaskList = () => {
               {task.done ? "✔" : ""}
             </StyledButton>
             <Content $done={task.done}>
-              <StyledLink to={`/zadanie/${task.id}`}>{task.content}</StyledLink>
+              <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
             </Content>
             <StyledButton
               $remove
