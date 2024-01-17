@@ -16,7 +16,7 @@ const ExampleTasks = () => {
     <>
       {error ? <ErrorComponent>{error}</ErrorComponent> : (
         <Button onClick={handleClick} disabled={loading}>
-          {loading ? "Loading..." : "Pobierz przykładowe zadania"}
+          {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
         </Button>
       )}
     </>
