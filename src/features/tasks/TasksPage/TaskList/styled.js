@@ -68,8 +68,8 @@ export const StyledLink = styled(Link)`
     color: ${({ theme }) => theme.colors.teal};
 
     &:hover {
-            filter: brightness(110%);
-        }
+        filter: brightness(110%);
+    }
 
     &:active {
         filter: brightness(120%);
