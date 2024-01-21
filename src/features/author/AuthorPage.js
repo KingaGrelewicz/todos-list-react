@@ -1,6 +1,6 @@
-import Container from "../../common/Container"
-import Header from "../../common/Header"
-import Section from "../../common/Section"
+import Container from "../../common/Container";
+import Header from "../../common/Header";
+import Section from "../../common/Section";
 import { Wrapper } from "./styled";
 
 const AuthorPage = () => (
