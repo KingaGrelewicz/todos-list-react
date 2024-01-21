@@ -16,10 +16,11 @@ export const TaskPage = () => {
             <Header title="Szczegóły zadania" />
             <Section
                 title={task ? task.content : "Nie znalezniono zadania 😢"}
-                body={
+                body={ task ?
                     <Wrapper>
-                        <strong>Ukończono:</strong> {task ? (task.done ? "Tak" : "Nie") : "Brak zadania"}
+                        <strong>Ukończono:</strong> {(task.done ? "Tak" : "Nie")}
                     </Wrapper>
+                    : ""
                 }
             />
         </Container>
