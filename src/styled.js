@@ -12,7 +12,7 @@ export const StyledNav = styled.ul`
 export const StyledNavLink = styled(NavLink)`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.white};
-    transition: 1s;
+    transition: 0.5s;
 
     &:hover {
         transform: scale(1.1);
