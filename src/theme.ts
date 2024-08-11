@@ -10,4 +10,4 @@ export const theme = {
     funGreen: "#028825",
     torchRed: "#f92624",
   }
-};
+} as const;

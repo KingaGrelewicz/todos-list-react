@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Container } from "./styled"
+import { Container } from "./styled";
 import { Button } from "../../Button";
 import {
   toggleHideDone,
   setAllDone,
   selectAreTasksEmpty,
   selectIsEveryTaskDone,
-  selectHideDone
+  selectHideDone,
 } from "../../taskSlice";
 
 const Buttons = () => {
@@ -33,6 +33,6 @@ const Buttons = () => {
       )}
     </Container>
   );
-}
+};
 
 export default Buttons;
