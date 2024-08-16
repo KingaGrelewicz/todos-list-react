@@ -3,15 +3,15 @@ import { Wrapper } from "../../Input/styled";
 import searchQueryParamName from "../../TaskPage/searchQueryParamName";
 import { useQueryParameters, useReplaceQueryParameter } from "../queryParameters";
 
-export default () => {
+const SearchComponent: React.FC = () => {
     const query = useQueryParameters(searchQueryParamName);
     const replaceQueryParameter = useReplaceQueryParameter();
 
 
-    const onInputChange = ({ target }) => {
+    const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         replaceQueryParameter({
             key: searchQueryParamName,
-            value: target.value !== "" ? target.value : undefined,
+            value: event.target.value !== "" ? event.target.value : undefined,
         });
     };
 
@@ -25,3 +25,5 @@ export default () => {
         </Wrapper>
     );
 };
+
+export default SearchComponent;

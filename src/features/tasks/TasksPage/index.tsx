@@ -4,10 +4,10 @@ import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
-import Search from "../TasksPage/Search";
+import Search from "./Search";
 import ExampleTasks from "../../../common/ExampleTasks";
 
-function TasksPage() {
+const TasksPage: React.FC = () => {
   return (
     <Container>
       <Header title="Lista zadań" />

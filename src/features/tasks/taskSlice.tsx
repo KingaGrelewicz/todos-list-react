@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getTaskFormLocalStorage } from "./taskLocalStorage";
+import { getTasksFromLocalStorage } from "./taskLocalStorage";
 import { Task } from "./types";
+import { RootState } from "../../store";
 
 interface TasksState {
   tasks: Task[];
@@ -10,7 +11,7 @@ interface TasksState {
 }
 
 const initialState: TasksState = {
-  tasks: getTaskFormLocalStorage() ?? [],
+  tasks: getTasksFromLocalStorage() ?? [],
   hideDone: false,
   loading: false,
   error: null,
@@ -78,24 +79,24 @@ export const {
   fetchExampleTasksFailure,
 } = tasksSlice.actions;
 
-const selectTaskState = (state: { tasks: TasksState }) => state.tasks;
+const selectTaskState = (state: RootState) => state.tasks;
 
-export const selectTasks = (state: { tasks: TasksState }) =>
-  selectTaskState(state).tasks;
-export const selectHideDone = (state: { tasks: TasksState }) =>
+export const selectTasks = (state: RootState) => selectTaskState(state).tasks;
+export const selectHideDone = (state: RootState) =>
   selectTaskState(state).hideDone;
-export const selectAreTasksEmpty = (state: { tasks: TasksState }) =>
+export const selectAreTasksEmpty = (state: RootState) =>
   selectTasks(state).length === 0;
-export const selectIsEveryTaskDone = (state: { tasks: TasksState }) =>
+export const selectIsEveryTaskDone = (state: RootState) =>
   selectTasks(state).every(({ done }) => done);
 
-export const getTaskById = (state: { tasks: TasksState }, taskId: string) =>
-  selectTasks(state).find(({ id }) => id === taskId);
+export const getTaskById = (
+  state: RootState,
+  id: string | undefined
+): Task | undefined => {
+  return id ? state.tasks.tasks.find((task) => task.id === id) : undefined;
+};
 
-export const selectTasksByQuery = (
-  state: { tasks: TasksState },
-  query: string | null
-) => {
+export const selectTasksByQuery = (state: RootState, query: string | null) => {
   const tasks = selectTasks(state);
 
   if (!query || query.trim() === "") {
