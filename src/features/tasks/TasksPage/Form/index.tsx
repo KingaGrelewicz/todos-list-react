@@ -6,7 +6,7 @@ import Input from "../../Input";
 import { useAppDispatch } from "../../../../hooks";
 
 const Form = () => {
-  const [newTaskContent, setNewTask] = useState<string>("");
+  const [newTaskContent, setNewTask] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   const dispatch = useAppDispatch();
