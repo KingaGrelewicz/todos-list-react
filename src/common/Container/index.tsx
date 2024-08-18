@@ -1,13 +1,12 @@
+import { ReactNode } from "react";
 import { StyledContainer } from "./styled";
 
 interface ContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => (
-  <StyledContainer>
-    {children}
-  </StyledContainer>
+const Container = ({ children }: ContainerProps) => (
+  <StyledContainer>{children}</StyledContainer>
 );
 
 export default Container;
